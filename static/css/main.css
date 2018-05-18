@@ -1,0 +1,42 @@
+/*
+Photo by Branden Harvey on Unsplash
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;    
+    color: white;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    color: white;    
+}
+
+.background-img {
+    background-image: url("../images/paper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    align-content: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+}

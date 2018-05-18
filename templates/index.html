@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Your News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css',v=0.005)}}"/>
+</head>
+<body>
+    <div class="background-img"></div>
+    <div class="container">
+        <h1>Get your news</h1>
+        <h2>Pick your favorite news provider</h2>
+        <form action="/news" method="POST">
+            <select name="news">
+                {% for source in sources["sources"] %}
+                <option value="{{source.id}}, {{source.name}}">{{source.name}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="submit"><br>
+        </form>
+    </div>
+</body>
+<footer>
+    <a href="newsapi.org">powered by NewsAPI</a>
+</footer>
+</html>
